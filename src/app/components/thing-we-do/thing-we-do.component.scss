@@ -1,0 +1,125 @@
+.services-section {
+  background-image: url("../../../assets/img/services-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .services-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    grid-row-gap: 0;
+
+    .services-imgs {
+      padding-left: 60px;
+      z-index: 2;
+
+      .col-service {
+        top: 40px;
+
+        &:last-child {
+          top: -40px;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .service-img {
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgb(19, 39, 107);
+          background: -o-linear-gradient(
+            45deg,
+            rgba(19, 39, 107, 1) 0%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          background: linear-gradient(
+            45deg,
+            rgba(19, 39, 107, 1) 0%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s;
+        }
+
+        &:hover:before {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .service-img-content {
+          position: absolute;
+          left: 30px;
+          bottom: 25px;
+        }
+        .read-more {
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s;
+        }
+
+        &:hover .read-more {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  .services-content {
+    background-color: #f215b6;
+    padding: 65px 60px 65px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:before {
+      content: "";
+      background-color: #f215b6;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: calc(133.33% - 20px);
+      height: 100%;
+    }
+
+    .services-title {
+      color: #253776;
+      font-size: 50px;
+    }
+
+    .desc {
+      font-size: 21px;
+      font-family: "Open Sans", sans-serif;
+    }
+  }
+
+  .outlined-title {
+    font-size: 180px;
+    font-weight: bold;
+    color: #d9d9d9;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+    position: absolute;
+    top: 30px;
+    left: -120px;
+    line-height: 0.8;
+  }
+  .trans {
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(20px);
+    }
+  }
+}

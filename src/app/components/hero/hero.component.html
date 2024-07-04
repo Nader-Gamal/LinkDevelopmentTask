@@ -1,0 +1,93 @@
+<section>
+  <div class="main-slider px-lg-5 pt-1">
+    <div class="main-banner-wrapper">
+      <div class="banner-slides">
+        <!-- Slide -->
+        <div class="slide slide-1">
+          <div class="container">
+            <div class="row banner-content">
+              <div class="col-lg-6 order-lg-1 order-2">
+                <div class="banner-text">
+                  <h5
+                    class="tagline fw-bold text-uppercase mt-lg-5 mt-4"
+                    [ngStyle]="{ color: currentSlide?.colorCode }"
+                  >
+                    {{ currentSlide?.category }}
+                  </h5>
+                  <div
+                    class="banner-title-wrapper position-relative mt-lg-5 mt-4"
+                  >
+                    <h3
+                      class="banner-title"
+                      [innerHTML]="currentSlide?.title"
+                    ></h3>
+                    <img
+                      [src]="currentSlide?.drow"
+                      alt="decore"
+                      class="w-auto"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p class="mt-4 desc fw-bold" style="width: 80%">
+                    {{ currentSlide?.brief }}
+                  </p>
+                  <div
+                    class="banner-btn d-flex align-items-center flex-wrap mt-4"
+                  >
+                    <a href="#" class="main-btn me-sm-5 me-0 mb-3"
+                      >Find out more</a
+                    >
+                    <a href="#" class="play-demo text-nowrap mb-3">
+                      <i
+                        class="fas fa-play me-3 text-white text-center rounded-circle"
+                      ></i>
+                      Play Demo
+                    </a>
+                    <!-- Slider Dots -->
+                    <div class="dot-containrer position-relative mt-4">
+                      <div class="container banner-dots d-flex">
+                        <div
+                          class="dot-1 dot rounded-circle me-5"
+                          [class.active]="activeDot === 0"
+                          (click)="setActiveDot(0)"
+                        ></div>
+                        <div
+                          class="dot-2 dot rounded-circle mx-5"
+                          [class.active]="activeDot === 1"
+                          (click)="setActiveDot(1)"
+                        ></div>
+                        <div
+                          class="dot-3 dot rounded-circle ms-5"
+                          [class.active]="activeDot === 2"
+                          (click)="setActiveDot(2)"
+                        ></div>
+                      </div>
+                      <img
+                        src="../../../assets/img/dotted-line.png"
+                        class="position-absolute dot-img"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 order-lg-2 order-1">
+                <div class="banner-img">
+                  <img
+                    [src]="currentSlide?.imgUrl"
+                    class="img-fluid"
+                    alt="traveller"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="banner-decore">
+            <img [src]="currentSlide?.itemUrl" alt="decore" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

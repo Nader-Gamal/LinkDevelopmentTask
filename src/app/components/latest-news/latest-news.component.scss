@@ -1,0 +1,123 @@
+.news-section {
+  overflow-x: hidden;
+
+  .news-filter {
+    li {
+      margin-right: 25px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        display: block;
+        color: #0f526e;
+        background-color: #e3e3e3;
+        padding: 7px 15px;
+        border-radius: 10px;
+
+        &.active {
+          color: #fff;
+          background-color: #0eceff;
+        }
+      }
+    }
+  }
+
+  .news-card {
+    background-color: #fff;
+    -webkit-box-shadow: 0 16px 26px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 16px 26px rgba(0, 0, 0, 0.16);
+    border-radius: 24px;
+
+    .card-img {
+      img {
+        max-height: 290px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 24px 24px 0 0;
+      }
+    }
+
+    .card-body {
+      h5 {
+        font-size: 18px;
+        font-weight: 600;
+        height: 65px;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+
+        &:hover {
+          color: #13beff;
+        }
+      }
+
+      .date {
+        i {
+          color: #13beff;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .card-bottom {
+      .blog-label {
+        background-color: rgba(116, 116, 116, 0.2);
+        border-radius: 15px;
+        padding: 2px 10px;
+      }
+    }
+
+    .share {
+      .share-icons {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        border-radius: 5px;
+        overflow: hidden;
+        display: none;
+
+        &.active {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+        }
+
+        li {
+          width: 67px;
+          height: 45px;
+          line-height: 45px;
+          text-align: center;
+          color: #fff;
+
+          &.facebook {
+            background-color: #3b5998;
+          }
+
+          &.twitter {
+            background-color: #00b9ff;
+          }
+
+          &.mail {
+            background-color: #ff6666;
+          }
+
+          a {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .news-decore {
+    position: absolute;
+    top: 25px;
+    right: -80px;
+    z-index: -1;
+  }
+}

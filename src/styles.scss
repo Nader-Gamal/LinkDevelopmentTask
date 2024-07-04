@@ -1,0 +1,109 @@
+@font-face {
+  font-display: swap;
+  font-family: "Kefa-Regular";
+  src: url("./assets/fonts/Kefa-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Volkhov-Regular";
+  src: url("./assets/fonts/Volkhov-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins-Regular";
+  src: url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+// awol-carsouel
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+
+// Define font-family variables
+$font-family-primary: "Poppins", sans-serif;
+$font-family-google-sans: "google_sans";
+$font-family-kefa: "Kefa-Regular";
+$font-family-volkhov: "Volkhov-Regular";
+
+body {
+  color: #5e6282;
+  font-family: "Poppins", sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+input,
+button:focus {
+  outline: none;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.text-sky {
+  color: #13beff;
+}
+
+.section-title {
+  span {
+    font-weight: 500;
+  }
+
+  .title {
+    color: #14183e;
+    font-weight: bold;
+    font-size: 45px;
+  }
+}
+
+.main-btn {
+  font-size: 18px;
+  padding: 16px 40px;
+  display: inline-block;
+  margin-bottom: 0;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #ff7c16;
+  cursor: pointer;
+  color: #fff;
+  font-family: "google_sans";
+  border: 1px solid #ff7c16;
+  outline: none;
+  letter-spacing: 0.7px;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    color: #ff7c16;
+  }
+}

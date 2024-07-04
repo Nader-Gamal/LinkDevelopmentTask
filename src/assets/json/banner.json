@@ -1,0 +1,40 @@
+{
+  "slides": [
+    {
+      "id": 0,
+      "brief": "Link Development, the global technology solutions provider and an A15 company, unveiled today that it has recently marked its Silver Jubilee anniversary.",
+      "order": 1,
+      "title": "25 Years of Business Growth",
+      "imgUrl": "./assets/img/slider/1.webp",
+      "itemUrl": "./assets/img/slider/decore1.webp",
+      "drow": "./assets/img/slider/title-decore1.webp",
+      "category": "Marking",
+      "videoUrl": "",
+      "colorCode": "#F215B6"
+    },
+    {
+      "id": 1,
+      "brief": "Link Development,Our people, processes, and technologies thrive on digital breakthroughs.",
+      "order": 2,
+      "title": "Crafty Minds Reshaping Future",
+      "imgUrl": "./assets/img/slider/2.webp",
+      "itemUrl": "./assets/img/slider/decore2.webp",
+      "drow": "./assets/img/slider/title-decore2.webp",
+      "category": "Trendy Inside-Out",
+      "videoUrl": "",
+      "colorCode": "#A6E51C"
+    },
+    {
+      "id": 2,
+      "brief": "On-shore, offshore, nearshore and hybrid models for dedicated development, product building and staff augmentation.",
+      "order": 3,
+      "title": "Global IT Experts",
+      "imgUrl": "./assets/img/slider/3.webp",
+      "itemUrl": "./assets/img/slider/decore3.webp",
+      "drow": "./assets/img/slider/title-decore3.webp",
+      "category": "Outsource",
+      "videoUrl": "",
+      "colorCode": "#FF7C16"
+    }
+  ]
+}
