@@ -6,7 +6,7 @@
       margin-right: 25px;
 
       &:last-child {
-        margin-right: 0;
+        display: none;
       }
 
       a {
@@ -15,6 +15,7 @@
         background-color: #e3e3e3;
         padding: 7px 15px;
         border-radius: 10px;
+        cursor: pointer;
 
         &.active {
           color: #fff;
@@ -32,7 +33,7 @@
 
     .card-img {
       img {
-        max-height: 290px;
+        height: 290px;
         -o-object-fit: cover;
         object-fit: cover;
         border-radius: 24px 24px 0 0;

@@ -1,44 +1,37 @@
 <header>
   <nav class="navbar navbar-expand-lg">
-    <div class="container px-lg-5 pt-1">
-      <a class="navbar-brand me-auto" href="#"
-        ><img
+    <div class="container logo px-lg-5 pt-1">
+      <a class="navbar-brand me-auto" href="#">
+        <img
           src="../../../assets/img/Logo.svg"
           class="w-100 ps-lg-4"
           alt="Link Development Logo"
-      /></a>
+        />
+      </a>
 
       <!-- mobNav -->
       <button
-        class="navbar-toggler"
+        class="hamburger"
         type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasWithBothOptions"
+        aria-controls="offcanvasWithBothOptions"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
 
+      <!-- Desktop Navbar Links -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item px-3">
+          <li class="nav-item px-md-1" *ngFor="let item of navItems">
             <a
-              class="nav-link fw-semibold active"
-              aria-current="page"
-              routerLink=""
-              >Home</a
+              class="nav-link fw-semibold bars"
+              [class.active]=""
+              [routerLink]=""
+              >{{ item.label }}</a
             >
-          </li>
-          <li class="nav-item px-2">
-            <a class="nav-link fw-semibold" routerLink="">About us</a>
-          </li>
-          <li class="nav-item px-2">
-            <a class="nav-link fw-semibold" routerLink="">News</a>
-          </li>
-          <li class="nav-item px-2">
-            <a class="nav-link fw-semibold" routerLink="">Contact us </a>
           </li>
         </ul>
       </div>
@@ -46,9 +39,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
           <li class="nav-item px-2">
-            <a class="nav-link fw-semibold" aria-current="page" routerLink=""
-              >Login</a
-            >
+            <a class="nav-link fw-semibold" routerLink="">Login</a>
           </li>
           <li class="nav-item px-2">
             <button class="btn border-1 btn-outline-dark px-4" type="submit">
@@ -76,3 +67,64 @@
     </div>
   </nav>
 </header>
+
+<!-- mobile navbar -->
+<div
+  class="offcanvas offcanvas-start"
+  data-bs-scroll="true"
+  tabindex="-1"
+  id="offcanvasWithBothOptions"
+  aria-labelledby="offcanvasWithBothOptionsLabel"
+>
+  <div class="offcanvas-header">
+    <a
+      href="#"
+      class="logo px-3 offcanvas-title"
+      id="offcanvasWithBothOptionsLabel"
+    >
+      <img
+        src="../../../assets/img/Logo.svg"
+        alt="JET logo"
+        style="width: 120px"
+      />
+    </a>
+  </div>
+  <div class="offcanvas-body">
+    <div id="menu">
+      <ul>
+        <li *ngFor="let item of navItems">
+          <a href="#" class="py-1">{{ item.label }}</a>
+          <hr class="w-75" />
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" aria-current="page" routerLink="">Login</a>
+        </li>
+        <hr class="w-75" />
+
+        <div class="d-flex align-items-center">
+          <li class="nav-item px-2">
+            <button class="btn border-1 btn-outline-dark px-4" type="submit">
+              Sign up
+            </button>
+          </li>
+          <li class="nav-item px-2 dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              EN
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">EN</a></li>
+              <li><a class="dropdown-item" href="#">AR</a></li>
+            </ul>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>

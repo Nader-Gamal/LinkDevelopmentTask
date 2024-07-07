@@ -16,10 +16,6 @@
   src: url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
 }
 
-// awol-carsouel
-@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
-@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
-
 // Define font-family variables
 $font-family-primary: "Poppins", sans-serif;
 $font-family-google-sans: "google_sans";
@@ -90,7 +86,7 @@ a:focus {
   background-color: #ff7c16;
   cursor: pointer;
   color: #fff;
-  font-family: "google_sans";
+  font-family: "Poppins-Regular";
   border: 1px solid #ff7c16;
   outline: none;
   letter-spacing: 0.7px;

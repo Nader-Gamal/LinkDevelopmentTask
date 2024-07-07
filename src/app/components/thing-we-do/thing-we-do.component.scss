@@ -99,7 +99,8 @@
     }
 
     .desc {
-      font-size: 21px;
+      font-size: 36px;
+      font-weight: lighter;
       font-family: "Open Sans", sans-serif;
     }
   }
@@ -120,6 +121,56 @@
 
     &:hover {
       transform: translateY(20px);
+    }
+  }
+}
+// media query
+@media (max-width: 1199px) {
+  .services-section {
+    .services-wrapper {
+      display: block;
+
+      .services-imgs {
+        padding: 0 60px;
+
+        .col-service {
+          top: 0 !important;
+        }
+      }
+    }
+
+    .services-content {
+      padding: 60px;
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .services-section {
+    .services-wrapper {
+      .services-imgs {
+        padding: 0 20px;
+      }
+    }
+
+    .services-content {
+      padding: 30px 20px;
+
+      .services-title {
+        font-size: 30px;
+      }
+
+      .desc {
+        font-size: 16px;
+      }
+    }
+
+    .outlined-title {
+      font-size: 90px;
     }
   }
 }

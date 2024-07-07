@@ -11,9 +11,10 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HttpClientModule } from '@angular/common/http';
 import { ThingWeDoComponent } from './components/thing-we-do/thing-we-do.component';
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HeroComponent, ThingWeDoComponent, LatestNewsComponent],
+  declarations: [AppComponent, NavbarComponent, HeroComponent, ThingWeDoComponent, LatestNewsComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

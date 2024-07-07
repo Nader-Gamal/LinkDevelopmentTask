@@ -9,8 +9,9 @@ import { BannerService } from 'src/app/services/banner.service';
 })
 export class HeroComponent implements OnInit {
   bannerSlides: BannerSlide[] = [];
-  activeDot: number = 0; // Assuming this is needed for active dot tracking
-  currentSlide: BannerSlide | undefined; // Variable to hold the current slide
+  activeDot: number = 0; // Active dot index for tracking the current slide
+  currentSlide: BannerSlide | undefined; // Current slide object
+  titleModified: boolean = false; // Flag to check if title has been modified
 
   constructor(private bannerService: BannerService) {}
 
@@ -40,12 +41,13 @@ export class HeroComponent implements OnInit {
     const slide = this.bannerSlides[dotNumber];
     this.currentSlide = slide; // Assign current slide
 
-    // Modify title if dotNumber is 2 and title has more than 2 words
-    if (dotNumber === 2) {
+    // Modify title if dotNumber is 2, title has more than 2 words, and not modified before
+    if (dotNumber === 2 && !this.titleModified) {
       const words = slide.title.split(' ');
       if (words.length > 2) {
         words.splice(2, 0, '<br/>');
         slide.title = words.join(' ');
+        this.titleModified = true; // Set flag to true after modification
       }
     } else {
       this.currentSlide.title = slide.title;

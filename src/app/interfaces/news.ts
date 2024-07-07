@@ -1,6 +1,8 @@
 export interface News {
-  imgSrc: string;
+  urlToImage: string;
   title: string;
-  date: string;
-  category: string;
+  publishedDate: string;
+  categoryID: number;
+  isLiked: boolean;
+  showShareIcons: boolean;
 }
