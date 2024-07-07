@@ -1,27 +1,61 @@
 # LinkDevTask
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
+### Overview
+This Angular application serves as a portal for users to browse news categorized by various topics. It includes a homepage with key sections such as a banner, highlights, "Things we do", and latest news. The application fetches data from specified API endpoints and allows filtering news by category.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Project Structure
+The project is organized as follows:
+```
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── hero/
+│   │   │   ├── latest-news/
+│   │   │   ├── navbar/
+│   │   │   ├── things-we-do/
+│   │   │   ├── footer/
+│   │   │
+│   │   ├── interfaces/   (banner.ts - category.ts - news.ts)
+│   │   ├── services/     (banner service , news service)
+│   │   ├── assets/       (img, styles, fonts)
+│   │   └── app.module.ts (Angular module)
+│   ├── environments/     (Environment configuration)
+│   ├── styles.scss       (Global styles using Sass)
+│   └── index.html        (Main HTML file)
+└── angular.json          (Angular project configuration)
+```
 
-## Code scaffolding
+### Setup and Installation
+1. Clone the repository from [repository URL].
+2. Install dependencies using `npm install`.
+3. Run the application locally using `ng serve`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### API Integration
+- **Banner**: Fetches data from [Banner API](assets/json/banner.json).
+- **Latest News**: Utilizes [News API]([https://api.npoint.io/d275425a434e02acf2f7/news_listing](https://api.npoint.io/d275425a434e02acf2f7)) and [News Categories API]([https://api.npoint.io/91298d970c27e9a06518](https://api.npoint.io/91298d970c27e9a06518)) for news listing and categorization.
 
-## Build
+### Functionality and Components
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#### Homepage Component Structure
+- **Banner**: Displays rotating highlights with category, title, brief, image, and optional video.
+- **Things we do**: Lists activities with titles, images, and "Read more" links.
+- **Latest News**: Shows news items with images, titles (linked to details), categories, publish dates, and social sharing options.
 
-## Running unit tests
+#### Filtering
+- **News Categories**: Allows users to filter news by category using a category menu and show more or less news and sorted it according to their publish date.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Features
+- **Responsive Design**: Mobile-first approach ensures compatibility across devices.
+- **State Management**: Uses Angular services to manage data retrieval and component interaction.
+- **Optimization**: Implements best practices for performance, including lazy loading and efficient data fetching.
 
-## Running end-to-end tests
+### Development Notes
+- **Component Reusability**: Utilizes Angular components and services for modularity and reusability.
+- **Styling**: Implements styles using Sass for maintainability and scalability.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Testing and Validation
+- **Compatibility**: Tested on latest versions of Chrome, Firefox, Safari, and Edge, and IE 11.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Conclusion
+This Angular application provides a scalable, responsive solution for presenting news content with intuitive navigation and efficient data handling. For further details or issues, refer to the repository or contact.
